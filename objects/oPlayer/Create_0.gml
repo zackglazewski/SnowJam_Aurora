@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-state = playerStatePlatformerFree;
+state = playerStateTopDownFree;
 
 tilemap = layer_tilemap_get_id(layer_get_id("Col"));
 
@@ -11,7 +11,9 @@ jump_impulse = 15;
 acceleration_magnitude = 1;
 kinetic_friction = 0.5;
 air_resistance = 0.1;
-static_friction = 0.5;
+static_friction = 0.5
+
+;
 grav = 1;
 max_speed = 7;
 terminal_velocity = 20;
@@ -43,3 +45,6 @@ function apply_forces() {
 		vspd = terminal_velocity;	
 	}
 }
+
+
+move_speed = 5;
