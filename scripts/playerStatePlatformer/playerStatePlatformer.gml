@@ -9,13 +9,16 @@ function playerStatePlatformerFree(){
 
 	if (input_interact) {
 		with (oFriend) {
-			if (point_distance(x, y, other.x, other.y) < 20) {
+			if (point_distance(x, y, other.x, other.y) < 64) {
 				other.dialogue_key = character_key;	
 			}
 		}
-		previousState = playerStatePlatformerFree;
-		state = playerStateTalk;
-		return;
+		if (dialogue_key != -1) {
+			Dialogue.queue_dialogue(dialogue_key);
+			previousState = playerStatePlatformerFree;
+			state = playerStateTalk;
+			return;
+		}
 	}
 	
 	// gravity

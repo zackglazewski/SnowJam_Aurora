@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-state = playerStateTopDownFree;
+//state = playerStateTopDownFree;
 previousState = playerStateTopDownFree;
 
 dialogue_key = -1;
@@ -51,3 +51,5 @@ function apply_forces() {
 
 
 move_speed = 5;
+
+

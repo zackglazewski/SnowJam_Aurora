@@ -8,6 +8,8 @@ ds_map_add(dialogue_storage, "test", ds_list_create());
 ds_map_add(dialogue_storage, "friend", ds_list_create());
 ds_map_add(dialogue_storage, "polarbear_before", ds_list_create());
 ds_map_add(dialogue_storage, "polarbear_after", ds_list_create());
+ds_map_add(dialogue_storage, "polarbear_village", ds_list_create());
+ds_map_add(dialogue_storage, "FishingSignPost", ds_list_create());
 
 
 function add_dialogue(character_key, _s) {
@@ -23,9 +25,13 @@ function add_dialogue(character_key, _s) {
 add_dialogue("test", "I am a test");
 add_dialogue("friend", "I am a friend");
 add_dialogue("friend", "You can press a to talk to people... but you already knew that!");
-add_dialogue("polarbear_before", "Hi, I'm a polar bear");
-add_dialogue("polarbear_after", "Thanks for feeding me");
-
+add_dialogue("polarbear_before", "*grumble grumble* I need to hibernate for the winter! But I'm all out of fish...");
+add_dialogue("polarbear_before", "Will you capture some fish for me? You will need to find some bait.");
+add_dialogue("polarbear_after", "Thanks for feeding me!");
+add_dialogue("polarbear_after", "zzzzzzzz....");
+add_dialogue("polarbear_village", "zzzzzzzz.... I... Can't... Wait... zzzzz Aurora.... Festival.... zzzzzz");
+add_dialogue("FishingSignPost", "Continue Right for the Fishing Hole");
+add_dialogue("FishingSignPost", "But consider climbing up to see the fabled magical worm!");
 
 dialogue_queue = ds_queue_create();
 
