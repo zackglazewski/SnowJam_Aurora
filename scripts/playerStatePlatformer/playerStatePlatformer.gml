@@ -5,6 +5,19 @@ function playerStatePlatformerFree(){
 	var input_horizontal = keyboard_check(ord("D")) - keyboard_check(ord("A"));
 	var input_jump = keyboard_check_pressed(vk_space);
 	
+	var input_interact = keyboard_check_pressed(ord("E"));
+
+	if (input_interact) {
+		with (oFriend) {
+			if (point_distance(x, y, other.x, other.y) < 20) {
+				other.dialogue_key = character_key;	
+			}
+		}
+		previousState = playerStatePlatformerFree;
+		state = playerStateTalk;
+		return;
+	}
+	
 	// gravity
 	add_force(grav, 270);
 	

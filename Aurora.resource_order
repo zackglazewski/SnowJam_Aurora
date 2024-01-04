@@ -17,8 +17,16 @@
     {"name":"Timelines","order":8,"path":"folders/Timelines.yy",},
   ],
   "ResourceOrderSettings": [
+    {"name":"Dialogue","order":2,"path":"objects/Dialogue/Dialogue.yy",},
+    {"name":"sFriend","order":2,"path":"sprites/sFriend/sFriend.yy",},
     {"name":"sCol","order":1,"path":"sprites/sCol/sCol.yy",},
+    {"name":"playerStateTalk","order":5,"path":"scripts/playerStateTalk/playerStateTalk.yy",},
+    {"name":"screen_shake","order":4,"path":"scripts/screen_shake/screen_shake.yy",},
     {"name":"playerStateTopDown","order":2,"path":"scripts/playerStateTopDown/playerStateTopDown.yy",},
+    {"name":"sPlayerIdle","order":4,"path":"sprites/sPlayerIdle/sPlayerIdle.yy",},
+    {"name":"oFriend","order":1,"path":"objects/oFriend/oFriend.yy",},
+    {"name":"sDialogueBox","order":3,"path":"sprites/sDialogueBox/sDialogueBox.yy",},
     {"name":"tilemap_place_meeting","order":1,"path":"scripts/tilemap_place_meeting/tilemap_place_meeting.yy",},
+    {"name":"Camera","order":3,"path":"objects/Camera/Camera.yy",},
   ],
 }

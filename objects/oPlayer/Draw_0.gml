@@ -3,9 +3,8 @@
 
 
 draw_self();
+/*
 draw_text(x, y, "hspd: " + string(hspd));
 draw_text(x, y + 10, "x: " + string(x));
 draw_text(x, y + 20, "y: " + string(y));
-
-
-
+*/

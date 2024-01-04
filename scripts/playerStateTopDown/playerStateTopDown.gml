@@ -7,6 +7,21 @@ function playerStateTopDownFree(){
 	var input_vertical = keyboard_check(ord("S")) - keyboard_check(ord("W"));
 	
 	var input_direction = point_direction(0, 0, input_horizontal, input_vertical);
+	var input_interact = keyboard_check_pressed(ord("E"));
+	
+	if (input_interact) {
+		with (oFriend) {
+			if (point_distance(x, y, other.x, other.y) < 64) {
+				other.dialogue_key = character_key;	
+			}
+		}
+		if (dialogue_key != -1) {
+			Dialogue.queue_dialogue(dialogue_key);
+			previousState = playerStateTopDownFree;
+			state = playerStateTalk;
+			return;
+		}
+	}
 	
 	// update speeds
 	hspd = lengthdir_x(abs(input_horizontal) * move_speed, input_direction);
@@ -30,4 +45,5 @@ function playerStateTopDownFree(){
 	
 	x += hspd;
 	y += vspd;
+	
 }
