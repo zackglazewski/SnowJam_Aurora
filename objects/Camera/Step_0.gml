@@ -23,9 +23,7 @@ shake_remain = max(0, shake_remain - ((1/shake_length) * shake_magnitude));
 
 camera_set_view_pos(cam, x - view_width_half, y - view_height_half);
 
-if instance_exists(oPlayer) {
-	follow = oPlayer;
-} 
+
 
 
 

@@ -50,6 +50,11 @@ function apply_forces() {
 }
 
 
+localFrame = 0;
 move_speed = 5;
 
 
+// fishing
+reeledIn = true;
+
+Camera.follow = id;

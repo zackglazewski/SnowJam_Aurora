@@ -23,6 +23,13 @@ function playerStateTopDownFree(){
 		}
 	}
 	
+	var walking = false;
+	if (input_horizontal!= 0) || (input_vertical != 0) {
+		direction = input_direction;
+		walking = true;
+	}
+		
+	
 	// update speeds
 	hspd = lengthdir_x(abs(input_horizontal) * move_speed, input_direction);
 	vspd = lengthdir_y(abs(input_vertical) * move_speed, input_direction);
@@ -45,5 +52,17 @@ function playerStateTopDownFree(){
 	
 	x += hspd;
 	y += vspd;
+	
+	var sprite_before = sprite_index;
+	if (walking) {
+		sprite_index = sPlayerWalk;	
+	} else {
+		sprite_index = sPlayerIdle;	
+	}
+	
+	if (sprite_index != sprite_before) {
+		localFrame = 0;	
+	}
+	sprite_animate();
 	
 }

@@ -6,6 +6,7 @@ function gotoMap(){
 
 function gotoPolarBear() {
 	room_goto(rPolarBear);	
+	audio_stop_all();
 }
 
 function gotoVillage() {
@@ -13,6 +14,7 @@ function gotoVillage() {
 }
 
 function gotoFishing() {
+	audio_stop_all();
 	room_goto(rFishing);
 }
 	

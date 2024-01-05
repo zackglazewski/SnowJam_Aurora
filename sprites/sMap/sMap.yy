@@ -2,9 +2,9 @@
   "resourceType": "GMSprite",
   "resourceVersion": "1.0",
   "name": "sMap",
-  "bbox_bottom": 449,
+  "bbox_bottom": 1676,
   "bbox_left": 0,
-  "bbox_right": 799,
+  "bbox_right": 2953,
   "bbox_top": 0,
   "bboxMode": 0,
   "collisionKind": 1,
@@ -13,14 +13,14 @@
   "edgeFiltering": false,
   "For3D": false,
   "frames": [
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"3ccdd0f2-aab5-44d4-bfce-bca3ca4f638c",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"e0ad944f-4bf7-4898-99e1-c2de3d5f3a81",},
   ],
   "gridX": 0,
   "gridY": 0,
-  "height": 450,
+  "height": 1677,
   "HTile": false,
   "layers": [
-    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"3d944ee5-ab3d-4cad-9621-28ea4c9eb1ea","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"8097c3b4-a4b9-42b0-9714-3aa9106255fd","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
   ],
   "nineSlice": null,
   "origin": 0,
@@ -54,7 +54,7 @@
     "timeUnits": 1,
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"1.0","Keyframes":[
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"3ccdd0f2-aab5-44d4-bfce-bca3ca4f638c","path":"sprites/sMap/sMap.yy",},},},"Disabled":false,"id":"701f2e07-96af-4814-915e-01d25b307056","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"e0ad944f-4bf7-4898-99e1-c2de3d5f3a81","path":"sprites/sMap/sMap.yy",},},},"Disabled":false,"id":"fc5f7bc6-120b-4bf4-9095-ac9c84e26f0c","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange": null,
@@ -70,5 +70,5 @@
   },
   "type": 0,
   "VTile": false,
-  "width": 800,
+  "width": 2954,
 }

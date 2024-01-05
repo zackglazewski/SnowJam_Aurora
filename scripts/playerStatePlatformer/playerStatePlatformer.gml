@@ -73,6 +73,22 @@ function playerStatePlatformerFree(){
 	x += hspd;
 	y += vspd;
 	
+	var sprite_before = sprite_index;
+	if (hspd > 0) {
+		direction = 0;
+		sprite_index = sPlayerWalk;
+	} else if (hspd < 0) {
+		direction = 180;
+		sprite_index = sPlayerWalk;
+	} else {
+		sprite_index = sPlayerIdle;	
+	}
+	
+	if (sprite_index != sprite_before) {
+		localFrame = 0;	
+	}
+	sprite_animate();
+	
 	
 	ds_list_clear(external_forces);
 }

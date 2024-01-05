@@ -3,6 +3,6 @@
 
 
 num_bait = 0;
-
+num_fish = 0;
 
 
