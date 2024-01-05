@@ -5,23 +5,39 @@ function hookStateReeled(){
 	if (fish != noone) {
 		show_debug_message("caught fish!");
 		instance_destroy(fish);
+		BaitCounter.num_fish++;
+		if (BaitCounter.num_fish >= 5) {
+			global.polarbear = true;
+		}
 		fish = noone;
 	}
-	if (keyboard_check_pressed(vk_space)) {
+	if (keyboard_check_pressed(vk_space)) && BaitCounter.num_bait > 0 {
 		state = hookStateCast;
+	} else if (keyboard_check_pressed(vk_space)) && BaitCounter.num_bait <= 0 {
+		Dialogue.queue_dialogue("FishingHoleNoBait");	
+		state = hookStateRead;
 	}
 }
+
+function hookStateRead() {
+	if (ds_queue_empty(Dialogue.dialogue_queue)) {
+		state = hookStateReeled;
+	} else if (keyboard_check_pressed(ord("E"))) {
+		ds_queue_dequeue(Dialogue.dialogue_queue);		
+	}
+}
+	
 
 function hookStateFishing() {
 	
 	if (keyboard_check(vk_space)) {
 		var dir = point_direction(x, y, oFishingPole.x, oFishingPole.y);
-		vspd += lengthdir_y(3, dir);
-		hspd += lengthdir_x(3, dir);
+		vspd += lengthdir_y(5, dir);
+		hspd += lengthdir_x(5, dir);
 	} else {
 		var horizontal_input = keyboard_check(ord("D")) - keyboard_check(ord("A"));
 		hspd += horizontal_input;
-		vspd += 0.1;
+		vspd += 0.2;
 		vspd = clamp(vspd, 0, max_fallspeed);
 	}
 	

@@ -7,7 +7,7 @@ Camera.follow = id;
 hspd = 0;
 vspd = 0;
 
-max_fallspeed = 1;
+max_fallspeed = 2;
 
 reeled_in = true;
 

@@ -23,16 +23,16 @@ function fishStateMove() {
 	}
 	
 	// collide and move
-	if (tilemap_place_meeting(tilemap, x + hspd, y, true)) {
-		while (!tilemap_place_meeting(tilemap, x + sign(hspd), y, true)) {
+	if (place_meeting(x + hspd, y, oFishBoundary)) {
+		while (!place_meeting(x + sign(hspd), y, oFishBoundary)) {
 			x += sign(hspd);	
 		}
 		moveDir = point_direction(0, 0, -hspd, vspd);
 		hspd = -1 * sign(hspd) * sprite_width;
 	}
 	
-	if (tilemap_place_meeting(tilemap, x, y + vspd, true)) {
-		while (!tilemap_place_meeting(tilemap, x, y + sign(vspd), true)) {
+	if (place_meeting(x, y + vspd, oFishBoundary)) {
+		while (!place_meeting(x, y + sign(vspd), oFishBoundary)) {
 			y += sign(vspd);	
 		}
 		

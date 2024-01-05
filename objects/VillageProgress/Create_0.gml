@@ -1,10 +1,10 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-polarbear = false;
-narwhal = false;
-wolverine = false;
-penguin = false;
+global.polarbear = false;
+global.narwhal = false;
+global.wolverine = false;
+global.penguin = false;
 
 
 
